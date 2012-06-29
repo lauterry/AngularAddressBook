@@ -1,30 +1,20 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app>
 <head>
     <meta http-equiv="Content-Type" content="charset=utf-8">
+    <script type="text/javascript" src="http://code.angularjs.org/1.0.1/angular-1.0.1.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
     <title>Mon carnet d'adresses</title>
 </head>
 <body>
-<div style="width:700px;">
-    <h2>Mon carnet d'adresses (3 contacts)</h2>
+<div style="width:700px;" ng-controller="ContactListCtrl">
+    <h2>Mon carnet d'adresses ({{contacts.length}} contacts)</h2>
     <ul>
-        <li>
-            <h3>Robert Hudson</h3>
-            <p>Groupe : Famille</p>
-            <p>Mobile : 0645271845</p>
-            <p>Adresse : 50 rue Victor Hugo 75004 Paris</p>
-        </li>
-        <li>
-            <h3>Pierre Samal</h3>
-            <p>Groupe : Ami</p>
-            <p>Mobile : 0642154528</p>
-            <p>Adresse : 30 avenue des Coquelicots 69001 Lyon</p>
-        </li>
-        <li>
-            <h3>Virginie Dupont</h3>
-            <p>Groupe : Travail</p>
-            <p>Mobile : 0655554120</p>
-            <p>Adresse : 5 rue des Pierres 51100 Reims</p>
+        <li ng-repeat="contact in contacts">
+            <h3>{{contact.nom}}</h3>
+            <p>Groupe : {{contact.groupe}}</p>
+            <p>Mobile : {{contact.mobile}}</p>
+            <p>Adresse : {{contact.adresse}}</p>
         </li>
     </ul>
 </div>
