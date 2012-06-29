@@ -14,4 +14,12 @@ function ContactListCtrl($scope) {
             "mobile":"0655554120",
             "adresse":"5 rue des Pierres 51100 Reims"}]
 
+    $scope.ajouter = function(){
+        $scope.contacts.push({
+            "nom":$scope.nom,
+            "groupe":$scope.groupe,
+            "mobile":$scope.mobile,
+            "adresse":$scope.adresse})
+    }
+
 }

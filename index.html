@@ -4,19 +4,48 @@
     <meta http-equiv="Content-Type" content="charset=utf-8">
     <script type="text/javascript" src="http://code.angularjs.org/1.0.1/angular-1.0.1.js"></script>
     <script type="text/javascript" src="js/controllers.js"></script>
+    <link rel="stylesheet" href="css/app.css">
     <title>Mon carnet d'adresses</title>
 </head>
-<body>
-<div style="width:700px;" ng-controller="ContactListCtrl">
+<body ng-controller="ContactListCtrl">
+<div id="contacts" >
     <h2>Mon carnet d'adresses ({{contacts.length}} contacts)</h2>
     <ul>
         <li ng-repeat="contact in contacts">
             <h3>{{contact.nom}}</h3>
+
             <p>Groupe : {{contact.groupe}}</p>
+
             <p>Mobile : {{contact.mobile}}</p>
+
             <p>Adresse : {{contact.adresse}}</p>
         </li>
     </ul>
+</div>
+<div id="contact-form">
+    <form>
+        <div>
+            <label>Nom :</label>
+            <input type="text" ng-model="nom">
+        </div>
+        <div>
+            <label>Groupe :</label>
+            <select ng-model="groupe">
+                <option value="Famille">Famille</option>
+                <option value="Famille">Ami</option>
+                <option value="Famille">Travail</option>
+            </select>
+        </div>
+        <div>
+            <label>Mobile :</label>
+            <input type="text" ng-model="mobile">
+        </div>
+        <div>
+            <label>Adresse :</label>
+            <input type="text" ng-model="adresse">
+        </div>
+        <button ng-click="ajouter()">Ajouter contact</button>
+    </form>
 </div>
 </body>
 </html>
