@@ -1,0 +1,29 @@
+#contacts-panel{
+    width: 500px;
+    display: inline-block;
+}
+
+#contact-form {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 60px;
+}
+
+#contact-form div {
+    margin: 10px 0px;
+}
+
+#contact-form  div > input, #contact-form div > select {
+    margin-left: 15px;
+}
+
+#contact-form  div > label {
+    float: left;
+    text-align: right;
+    width:150px;
+}
+#contact-form button {
+    margin-left: 164px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
