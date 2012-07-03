@@ -8,14 +8,26 @@
     <title>Mon carnet d'adresses</title>
 </head>
 <body>
+<ng-include src="'templates/header.html'"></ng-include>
 <div id="contacts-panel" ng-controller="ContactListCtrl">
     <h2>Mon carnet d'adresses ({{contacts.length}} contacts)</h2>
+    <div>
+        <label>Présentation : </label>
+        <select ng-model="mode">
+            <option value="table">Tableau</option>
+            <option value="vignette">Vignette</option>
+        </select>
+    </div>
     <ul>
         <li ng-repeat="contact in contacts">
-            <h3>{{contact.nom}}</h3>
-            <p>Groupe : {{contact.groupe}}</p>
-            <p>Mobile : {{contact.mobile}}</p>
-            <p>Adresse : {{contact.adresse}}</p>
+            <div ng-switch on="mode" >
+                <div ng-switch-when="table">
+                    <ng-include src="'templates/contactInfoTable.html'"></ng-include>
+                </div>
+                <span ng-switch-when="vignette">
+                     <ng-include src="'templates/contactInfo.html'"></ng-include>
+                </span>
+            </div>
         </li>
     </ul>
 </div>

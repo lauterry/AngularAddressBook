@@ -1,3 +1,27 @@
 #contacts-panel {
-    width: 500px;
+
+}
+
+header > h1 {
+    display: inline-block;
+}
+
+header ul {
+    list-style-type:none;
+    display: inline-block;
+}
+
+header ul > li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.row > span:first-of-type{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.row > div {
+    margin-right:5px;
+    display:inline-block;
 }

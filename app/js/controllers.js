@@ -1,5 +1,4 @@
 function ContactListCtrl($scope) {
-
     $scope.contacts = [
         {"nom":"Robert Hudson",
             "groupe":"Famille",
@@ -12,6 +11,9 @@ function ContactListCtrl($scope) {
         {"nom":"Virginie Dupont",
             "groupe":"Travail",
             "mobile":"0655554120",
-            "adresse":"5 rue des Pierres 51100 Reims"}]
+            "adresse":"5 rue des Pierres 51100 Reims"}
+    ]
+
+    $scope.mode = 'table';
 
 }
