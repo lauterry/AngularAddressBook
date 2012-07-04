@@ -1,19 +1,17 @@
 #contacts-panel {
-
+    margin-top: 14px;
 }
 
-header > h1 {
-    display: inline-block;
+#contacts-panel > h2 {
+    margin-bottom : 10px;
 }
 
-header ul {
-    list-style-type:none;
-    display: inline-block;
+#contacts-panel .form-inline {
+    margin-bottom : 20px;
 }
 
-header ul > li {
-    display: inline-block;
-    margin-right: 5px;
+header {
+    margin-top: 14px;
 }
 
 .row > span:first-of-type{

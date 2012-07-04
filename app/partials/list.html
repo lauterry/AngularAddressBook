@@ -1,0 +1,15 @@
+<div class="form-inline">
+    <label>Présentation : </label>
+    <select ng-model="mode">
+        <option value="table">Tableau</option>
+        <option value="vignette">Vignette</option>
+    </select>
+</div>
+<div ng-switch on="mode" >
+    <div ng-switch-when="vignette">
+        <ng-include src="'templates/contactInfo.html'"></ng-include>
+    </div>
+    <div ng-switch-when="table">
+        <ng-include src="'templates/contactInfoTable.html'"></ng-include>
+    </div>
+</div>

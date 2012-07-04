@@ -1,0 +1,36 @@
+<form class="form-horizontal">
+    <div class="control-group">
+        <label class="control-label">Nom :</label>
+        <div class="controls">
+            <input type="text" name="nom" ng-model="contact.nom">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Groupe:</label>
+        <div class="controls">
+            <select ng-model="contact.groupe" name="groupe">
+                <option value="Ami">Ami</option>
+                <option value="Famille">Famille</option>
+                <option value="Travail">Travail</option>
+            </select>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Mobile: </label>
+        <div class="controls">
+            <input type="text" name="mobile" ng-model="contact.mobile">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Adresse: </label>
+        <div class="controls">
+            <input type="text" name="adresse" ng-model="contact.adresse">
+        </div>
+    </div>
+    <div class="form-actions">
+        <a class="btn" ng-href="#/list">Retour</a>
+        <button class="btn btn-success" ng-click="saveContact()">Enregistrer</button>
+    </div>
+</form>
+
+

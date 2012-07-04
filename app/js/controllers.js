@@ -1,4 +1,4 @@
-function ContactListCtrl($scope) {
+function ContactCtrl($scope) {
     $scope.contacts = [
         {"nom":"Robert Hudson",
             "groupe":"Famille",
@@ -12,8 +12,27 @@ function ContactListCtrl($scope) {
             "groupe":"Travail",
             "mobile":"0655554120",
             "adresse":"5 rue des Pierres 51100 Reims"}
-    ]
+    ];
+}
 
-    $scope.mode = 'table';
+function ContactListCtrl($scope) {
+    if($scope.mode == null){
+        $scope.mode = 'vignette';
+    }
+}
 
+function ContactEditCtrl($scope,$routeParams,$location) {
+    var newContact = false;
+    if ($routeParams.contactId) {
+        $scope.contact = $scope.contacts[$routeParams.contactId];
+    } else {
+        $scope.contact = {};
+        newContact = true;
+    }
+    $scope.saveContact = function() {
+        if (newContact) {
+            $scope.contacts.push($scope.contact);
+        }
+        $location.path("/list");
+    };
 }
