@@ -1,9 +1,9 @@
 <table class="table table-striped">
     <tr ng-repeat="contact in contacts">
-    <td style="width:120px;">{{contact.nom}}</td>
-    <td style="width:100px;">{{contact.groupe}}</td>
-    <td style="width:120px;">{{contact.mobile}}</td>
-    <td style="width:260px;">{{contact.adresse}}</td>
-    <td style="width:50px;"><a ng-href="#/edit/{{$index}}">Editer</a></td>
+        <td>{{contact.nom}}</td>
+        <td>{{contact.groupe}}</td>
+        <td>{{contact.mobile}}</td>
+        <td>{{contact.adresse}}</td>
+        <td><a ng-href="#/edit/{{$index}}">Editer</a></td>
     </tr>
 </table>
