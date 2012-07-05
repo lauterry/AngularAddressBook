@@ -1,4 +1,4 @@
-<form name="editForm" class="form-horizontal">
+<form name="editForm" class="form-horizontal" ng-submit="saveContact()">
     <div class="control-group" ng-class="{error: editForm.nom.$invalid}">
         <label class="control-label">Nom :</label>
         <div class="controls">
@@ -32,6 +32,6 @@
     </div>
     <div class="form-actions">
         <a class="btn" ng-href="#/list">Retour</a>
-        <button class="btn btn-success" ng-click="saveContact()" ng-disabled="editForm.$invalid">Enregistrer</button>
+        <input type="submit" class="btn btn-success" ng-disabled="editForm.$invalid" value="Enregistrer"/>
     </div>
 </form>

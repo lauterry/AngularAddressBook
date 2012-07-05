@@ -11,9 +11,11 @@
 </head>
 <body>
 <div class="container">
-    <ng-include src="'templates/header.html'"></ng-include>
     <div id="contacts-panel" ng-controller="ContactCtrl">
-        <h2>Mon carnet d'adresses ({{contacts.length}} contacts) <a class="btn btn-primary" ng-href="#/edit/">Ajouter</a></h2>
+        <h2>
+            Mon carnet d'adresses ({{contacts.length}} contacts)
+            <a class="btn btn-primary" ng-href="#/edit/">Ajouter</a>
+        </h2>
         <div ng-view></div>
     </div>
 </div>

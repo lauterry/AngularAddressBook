@@ -1,15 +1,9 @@
-<div class="form-inline">
-    <label>Présentation : </label>
-    <select ng-model="mode">
-        <option value="table">Tableau</option>
-        <option value="vignette">Vignette</option>
-    </select>
-</div>
-<div ng-switch on="mode" >
-    <div ng-switch-when="vignette">
-        <ng-include src="'templates/contactInfo.html'"></ng-include>
-    </div>
-    <div ng-switch-when="table">
-        <ng-include src="'templates/contactInfoTable.html'"></ng-include>
-    </div>
-</div>
+<ul class="unstyled">
+    <li class="well span6" ng-repeat="contact in contacts">
+        <h3>{{contact.nom}}</h3>
+        <p>Groupe : {{contact.groupe}}</p>
+        <p>Mobile : {{contact.mobile}}</p>
+        <p>Adresse : {{contact.adresse}}</p>
+        <a ng-href="#/edit/{{$index}}">Editer</a>
+    </li>
+</ul>
