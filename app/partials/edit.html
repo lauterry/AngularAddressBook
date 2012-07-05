@@ -1,9 +1,8 @@
 <form name="editForm" class="form-horizontal" ng-submit="saveContact()">
-    <div class="control-group" ng-class="{error: editForm.nom.$invalid}">
+    <div class="control-group">
         <label class="control-label">Nom :</label>
         <div class="controls">
             <input type="text" name="nom" ng-model="contact.nom" required>
-            <p class="help-inline" ng-show="editForm.nom.$error.required">Ce champ est requis.</p>
         </div>
     </div>
     <div class="control-group">
@@ -16,12 +15,10 @@
             </select>
         </div>
     </div>
-    <div class="control-group" ng-class="{error: editForm.mobile.$invalid}">
+    <div class="control-group">
         <label class="control-label">Mobile: </label>
         <div class="controls">
-            <input type="text" name="mobile" ng-model="contact.mobile" ng-maxlength="10" ng-pattern="/^[0-9]+$/">
-            <p class="help-inline" ng-show="editForm.mobile.$error.maxlength">Ce numéro contient trop de chiffres.</p>
-            <p class="help-inline" ng-show="editForm.mobile.$error.pattern">Le numéro ne doit pas contenir de lettres.</p>
+            <input type="text" name="mobile" ng-model="contact.mobile">
         </div>
     </div>
     <div class="control-group">
@@ -32,6 +29,6 @@
     </div>
     <div class="form-actions">
         <a class="btn" ng-href="#/list">Retour</a>
-        <input type="submit" class="btn btn-success" ng-disabled="editForm.$invalid" value="Enregistrer"/>
+        <input type="submit" class="btn btn-success" value="Enregistrer"/>
     </div>
 </form>
