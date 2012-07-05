@@ -1,9 +1,6 @@
 <ul class="unstyled">
     <li class="well span6" ng-repeat="contact in contacts">
-        <h3>{{contact.nom}}</h3>
-        <p>Groupe : {{contact.groupe}}</p>
-        <p>Mobile : {{contact.mobile}}</p>
-        <p>Adresse : {{contact.adresse}}</p>
+        <contact-widget contact="contact"></contact-widget>
         <a ng-href="#/edit/{{$index}}">Editer</a>
     </li>
 </ul>

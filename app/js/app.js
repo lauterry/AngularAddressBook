@@ -9,4 +9,14 @@ angular.module('myApp', [])
             controller: ContactListCtrl
         });
         $routeProvider.otherwise({ redirectTo: '/list' });
-    }]);
+    }])
+    .directive('contactWidget', function(){
+        return {
+            restrict: 'E',
+            replace: true,
+            templateUrl:'templates/contactWidget.html',
+            scope:{
+                contact: '='
+            }
+        }
+    });
