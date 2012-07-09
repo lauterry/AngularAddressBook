@@ -1,5 +1,5 @@
-AngularBlog
-===========
+AngularAdressBook
+=================
 
 Démarrer votre application web. Pour cela :
 
